@@ -11,6 +11,30 @@ lsp.ensure_installed({
 lsp.nvim_workspace()
 
 
+--- Typescript server
+require('lspconfig').tsserver.setup{}
+
+local nvim_lsp = require('lspconfig')
+
+nvim_lsp.rust_analyzer.setup({
+    -- Example configuration:
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                loadOutDirsFromCheck = true,
+                allFeatures = true
+            },
+            procMacro = {
+                enable = true
+            },
+            checkOnSave = {
+                command = "clippy"
+            },
+        },
+    }
+})
+
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({

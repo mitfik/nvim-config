@@ -4,9 +4,10 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', function() 
-	builtin.grep_string({ search = vim.fn.input("Grep > ") });
-end)
+vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
+-- vim.keymap.set('n', '<leader>ps', function()
+-- 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
+-- end)
 
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- Moving select lines up and down
@@ -31,3 +32,4 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("n", "<leader>qd", "mpeld bhd `ph")
 vim.keymap.set("n", "<leader>q'", "mpea'<Esc>bi'<Esc>`pl")
 vim.keymap.set("n", "<leader>q\"", "mpea\"<Esc>bi\"<Esc>`pl")
+
