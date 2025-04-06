@@ -1,7 +1,6 @@
-require("mtfk.packer")
+require("mtfk.lazy")
 require("mtfk.remap")
 require("mtfk.set")
-vim.cmd('colorscheme rose-pine')
 vim.o.filetype = 'on'
 vim.o.foldmethod = 'syntax'
 vim.o.foldlevel = 1
@@ -14,3 +13,4 @@ vim.cmd [[
   highlight Normal ctermbg=none
   highlight NonText ctermbg=none
 ]]
+vim.cmd("colorscheme rose-pine")
