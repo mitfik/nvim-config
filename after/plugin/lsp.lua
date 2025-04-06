@@ -3,7 +3,6 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
   'rust_analyzer',
 })
 
@@ -12,7 +11,7 @@ lsp.nvim_workspace()
 
 
 --- Typescript server
-require('lspconfig').tsserver.setup{}
+require('lspconfig').ts_ls.setup{}
 
 local nvim_lsp = require('lspconfig')
 

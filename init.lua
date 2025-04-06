@@ -11,3 +11,7 @@ autocmd BufReadPost *
  \ endif
 ]])
 
+
+-- Disable Copilito by default
+vim.cmd([[let g:copilot#enabled = 0]])
+
